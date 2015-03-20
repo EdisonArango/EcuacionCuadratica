@@ -11,8 +11,10 @@
         <meta charset="UTF-8">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> 
         <title>Ecuaci&oacute;n Cuadr&aacute;tica</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     </head>
     <body>
+        <br><br>
     <center>
         <form method="get" action="EcuacionSegundoGrado">           
             <input class="solo-numero" type="text" name="a" placeholder="a">
@@ -20,7 +22,6 @@
             <input class="solo-numero" type="text" name="b" placeholder="b">
             <label>x+</label>
             <input class="solo-numero" type="text" name="c" placeholder="c">
-            <label> = 0</label>
             <br>
             <input type="hidden" name="opcion" id="opcion">
             <input type="submit" onclick = "this.form.target='frameCalcular';document.getElementById('opcion').value='calcular';" value="Calcular Ra&iacute;ces">
@@ -33,7 +34,7 @@
     <script>
         $(document).ready(function (){
           $('.solo-numero').keyup(function (){
-            this.value = (this.value + '').replace(/[^0-9.]/g, '');
+            this.value = (this.value + '').replace(/[^0-9.-]/g, '');
           });
         });
     </script>
